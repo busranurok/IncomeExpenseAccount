@@ -1,0 +1,26 @@
+﻿@model CategoryType
+@{
+    ViewBag.Title = "Kategori Tip Detayı";
+}
+
+<h2>Kategori Tip Detayı</h2>
+
+<div class="form-group" hidden>
+    @Html.DisplayNameFor(m=> m.CategoryTypeId)
+    <br />
+    @Html.DisplayFor(m=> m.CategoryTypeId)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(m => m.CategoryTypeName)
+    <br />
+    @Html.DisplayFor(m => m.CategoryTypeName)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(m => m.CategoryTypeDescription)
+    <br />
+    @Html.DisplayFor(m => m.CategoryTypeDescription)
+</div>
+
+@Html.ActionLink("Listeye geri dön","ListCategoryType","CategoryType")

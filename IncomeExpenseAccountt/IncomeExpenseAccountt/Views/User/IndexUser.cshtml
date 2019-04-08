@@ -1,0 +1,71 @@
+﻿@model IEnumerable<IncomeExpenseAccount.Entities.Concrete.User>
+
+@*model benim ekranda göstermek istediğim verisetimdir.Burada tüm user listesini getireceği için IEnumerable ile getiririz ama tek bir veri getirmek istersek mesela user ın detay ekranında tek bir user a ait bilgileri getirilmesini istediğimizde bunu yazmayız. IeNUMARABLE BİR LİST E dir. Direkt web.config e add namaspace diyerek bulunduğu yer bilgisini veririz.*@
+
+@{
+    ViewBag.Title = "Kullanıcı Listesi";
+}
+
+<h2>Kullanıcı Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni", "AddUser","User")
+</p>
+<table class="table">
+    <tr>
+        <th style="display:none">
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th style="display:none">
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="display:none">
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td style="display:none">
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "AddUser", new { id = item.UserId }) |
+            @Html.ActionLink("Detay", "UserDetails", new { id = item.UserId }) |
+            @Html.ActionLink("Sil", "DeleteUser", new { id = item.UserId })
+        </td>
+    </tr>
+}
+
+</table>

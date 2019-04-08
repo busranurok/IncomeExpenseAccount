@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Expense>
+@{
+    ViewBag.Title = "Gider Listesi";
+}
+
+<h2>Gider Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni", "AddExpense", "Expense")
+</p>
+
+<table>
+    <tr>
+        <th style="display:none">
+            @Html.DisplayNameFor(model => model.ExpenseId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpenseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpenseDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpenseAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td style="display:none">
+            @Html.DisplayFor(modelItem => item.ExpenseId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpenseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpenseDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpenseAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "AddExpense", new { id = item.ExpenseId }) |
+            @Html.ActionLink("Detay", "ExpenseDetails", new { id = item.ExpenseId }) |
+            @Html.ActionLink("Sil", "DeleteExpense", new { id = item.ExpenseId })
+        </td>
+    </tr>
+    }
+    </table>
+   

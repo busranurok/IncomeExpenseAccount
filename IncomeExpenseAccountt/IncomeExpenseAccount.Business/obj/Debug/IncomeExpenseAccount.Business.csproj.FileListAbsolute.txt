@@ -1,0 +1,15 @@
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\IncomeExpenseAccount.Business.dll.config
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\IncomeExpenseAccount.Business.dll
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\IncomeExpenseAccount.Business.pdb
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\IncomeExpenseAccount.DataAccess.dll
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\IncomeExpenseAccount.Entities.dll
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\EntityFramework.dll
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\IncomeExpenseAccount.DataAccess.pdb
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\IncomeExpenseAccount.DataAccess.dll.config
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\IncomeExpenseAccount.Entities.pdb
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\bin\Debug\EntityFramework.xml
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\obj\Debug\IncomeExpenseAccount.Business.csprojAssemblyReference.cache
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\obj\Debug\IncomeExpenseAccount.Business.csproj.CoreCompileInputs.cache
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\obj\Debug\IncomeExpenseAccount.Business.csproj.CopyComplete
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\obj\Debug\IncomeExpenseAccount.Business.dll
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Business\obj\Debug\IncomeExpenseAccount.Business.pdb

@@ -1,0 +1,44 @@
+﻿@model Revenue
+@{
+    ViewBag.Title = "Gelir Detayı";
+}
+
+<h2>Gelir Detayı</h2>
+
+<div class="form-group" style="display:none">
+    @Html.DisplayNameFor(x => x.RevenueId)
+    <br />
+    @Html.DisplayFor(x => x.RevenueId)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.RevenueName)
+    <br />
+    @Html.DisplayFor(x => x.RevenueName)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.RevenueDescription)
+    <br />
+    @Html.DisplayFor(x => x.RevenueDescription)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.RevenueAmount)
+    <br />
+    @Html.DisplayFor(x => x.RevenueAmount)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.DateTime)
+    <br />
+    @Html.DisplayFor(x => x.DateTime)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.Category.CategoryName)
+    <br />
+    @Html.DisplayFor(x => x.Category.CategoryName)
+</div>
+
+@Html.ActionLink("Listeye geri dön", "ListRevenue", "Revenue")

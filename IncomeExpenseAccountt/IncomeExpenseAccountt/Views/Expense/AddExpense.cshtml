@@ -1,0 +1,51 @@
+﻿@model ExpenseAddViewModel
+@{
+    ViewBag.Title = "Yeni Gider";
+}
+
+<h2>Yeni Gider</h2>
+
+@{
+    List<SelectListItem> categoryList = new List<SelectListItem>();
+    foreach (Category category in ViewBag.Categories)
+    {
+        SelectListItem item = new SelectListItem();
+        item.Text = category.CategoryName;
+        item.Value = category.CategoryId.ToString();
+
+        categoryList.Add(item);
+    }
+}
+
+@using (Html.BeginForm("AddExpense", "Expense", FormMethod.Post))
+{
+    <div>
+        <input name="Expense.ExpenseId" value="@Model.Expense.ExpenseId" hidden />
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="Expense.ExpenseName" value="@Model.Expense.ExpenseName" placeholder="Gider Adını Giriniz.." />
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="Expense.ExpenseDescription" value="@Model.Expense.ExpenseDescription" placeholder="Gider Açıklamasını Giriniz.." />
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="Expense.ExpenseAmount" value="@Model.Expense.ExpenseAmount" placeholder="Toplam Gideri Giriniz.." />
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="Expense.DateTime" value="@Model.Expense.DateTime" placeholder="Tarihi Giriniz.." />
+    </div>
+
+    <div class="form-group">
+        @Html.DropDownListFor(x => x.Expense.CategoryId, categoryList, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <input class="btn btn-success" type="submit" value="Kaydet" />
+    </div>
+
+    @Html.ActionLink("Listeye geri dön", "ListExpense", "Expense")
+}

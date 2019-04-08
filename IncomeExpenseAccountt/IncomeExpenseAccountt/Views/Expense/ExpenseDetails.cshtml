@@ -1,0 +1,44 @@
+﻿@model Expense
+@{
+    ViewBag.Title = "Gider Detayı";
+}
+
+<h2>Gider Detayı</h2>
+
+<div class="form-group" style="display:none">
+    @Html.DisplayNameFor(x => x.ExpenseId)
+    <br />
+    @Html.DisplayFor(x => x.ExpenseId)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.ExpenseName)
+    <br />
+    @Html.DisplayFor(x => x.ExpenseName)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.ExpenseDescription)
+    <br />
+    @Html.DisplayFor(x => x.ExpenseDescription)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.ExpenseAmount)
+    <br />
+    @Html.DisplayFor(x => x.ExpenseAmount)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.DateTime)
+    <br />
+    @Html.DisplayFor(x => x.DateTime)
+</div>
+
+<div class="form-group">
+    @Html.DisplayNameFor(x => x.Category.CategoryName)
+    <br />
+    @Html.DisplayFor(x => x.Category.CategoryName)
+</div>
+
+@Html.ActionLink("Listeye geri dön", "ListExpense", "Expense")

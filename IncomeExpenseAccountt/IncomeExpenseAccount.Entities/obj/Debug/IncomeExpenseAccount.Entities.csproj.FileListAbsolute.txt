@@ -1,0 +1,6 @@
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Entities\bin\Debug\IncomeExpenseAccount.Entities.dll
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Entities\bin\Debug\IncomeExpenseAccount.Entities.pdb
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Entities\obj\Debug\IncomeExpenseAccount.Entities.csprojAssemblyReference.cache
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Entities\obj\Debug\IncomeExpenseAccount.Entities.csproj.CoreCompileInputs.cache
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Entities\obj\Debug\IncomeExpenseAccount.Entities.dll
+C:\Users\HBO\source\repos\IncomeExpenseAccountt\IncomeExpenseAccount.Entities\obj\Debug\IncomeExpenseAccount.Entities.pdb

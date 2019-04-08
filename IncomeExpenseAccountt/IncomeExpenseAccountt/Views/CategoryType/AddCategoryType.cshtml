@@ -1,0 +1,22 @@
+﻿@model CategoryTypeAddViewModel
+@{
+    ViewBag.Title = "Yeni Kategori Tipi";
+}
+
+<h2>Yeni Kategori Tipi</h2>
+
+@using (Html.BeginForm("AddCategoryType", "CategoryType", FormMethod.Post, new { id = "form" }))
+{
+    <input name="CategoryType.CategoryTypeId" value="@Model.CategoryType.CategoryTypeId" hidden />
+    <div class="form-group">
+        <input class="form-control" name="CategoryType.CategoryName" value="@Model.CategoryType.CategoryTypeName" placeholder="Kategori Adını giriniz.." />
+    </div>
+    <div class="form-group">
+        <input class="form-control" name="CategoryType.CategoryTypeDescription" value="@Model.CategoryType.CategoryTypeDescription" placeholder="Kategori Açıklamasını giriniz.." />
+    </div>
+    <div class="form-group">
+        <input id="btnKaydet" class="btn btn-success" type="submit" value="Kaydet" />
+    </div>
+
+    @Html.ActionLink("Listeye geri dön", "ListCategoryType", "CategoryType")
+}

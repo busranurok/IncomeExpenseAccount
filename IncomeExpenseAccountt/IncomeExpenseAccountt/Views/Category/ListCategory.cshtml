@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Category>
+@{ 
+    ViewBag.Title = "Kategori Listesi";
+}
+
+<h2>Kategori Listesi</h2>
+
+<p>
+@Html.ActionLink("Yeni", "AddCategory", "Category")
+</p>
+
+<table class="table">
+    <tr>
+        <th style="display:none">
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryType.CategoryTypeName)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td style="display:none">
+            @Html.DisplayFor(modelItem => item.CategoryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryType.CategoryTypeName)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "AddCategory", new { id = item.CategoryId }) |
+            @Html.ActionLink("Detay", "CategoryDetails", new { id = item.CategoryId }) |
+            @Html.ActionLink("Sil", "DeleteCategory", new { id = item.CategoryId })
+        </td>
+    </tr>
+    }
+
+</table>
+
+

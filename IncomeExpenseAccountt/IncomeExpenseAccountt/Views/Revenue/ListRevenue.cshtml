@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Revenue>
+@{
+    ViewBag.Title = "Gelir Listesi";
+}
+
+<h2>Gelir Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni", "AddRevenue", "Revenue")
+</p>
+
+<table class="table">
+    <tr>
+        <th style="display:none">
+            @Html.DisplayNameFor(model => model.RevenueId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RevenueName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RevenueDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RevenueAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="display:none">
+                @Html.DisplayFor(modelItem => item.RevenueId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RevenueName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RevenueDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RevenueAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime.Date)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "AddRevenue", new { id = item.RevenueId }) |
+                @Html.ActionLink("Detay", "RevenueDetails", new { id = item.RevenueId }) |
+                @Html.ActionLink("Sil", "DeleteRevenue", new { id = item.RevenueId })
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,43 @@
+﻿@model CategoryAddViewModel
+@{
+    ViewBag.Title = "Yeni Kategori";
+}
+
+@{
+    List<SelectListItem> categoryTypeList = new List<SelectListItem>();
+    foreach (CategoryType categoryType in ViewBag.CategoryTypes)
+    {
+        SelectListItem item = new SelectListItem();
+        item.Text = categoryType.CategoryTypeName;
+        item.Value = categoryType.CategoryTypeId.ToString();
+
+        categoryTypeList.Add(item);
+    }
+}
+
+<h2>Yeni Kategori</h2>
+
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+{
+    <div>
+        <input name="Category.CategoryId" value="@Model.Category.CategoryId" hidden />
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="Category.CategoryName" value="@Model.Category.CategoryName" placeholder="Kategori Adını Giriniz.." />
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" name="Category.CategoryDescription" value="@Model.Category.CategoryDescription" placeholder="Kategori Açıklamasını Giriniz.." />
+    </div>
+
+    <div class="form-group">
+        @Html.DropDownListFor(x => x.Category.CategoryTypeId, categoryTypeList, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <input class="btn btn-success" type="submit" value="Kaydet" />
+    </div>
+
+    @Html.ActionLink("Listeye geri dön", "ListCategory", "Category")
+}
